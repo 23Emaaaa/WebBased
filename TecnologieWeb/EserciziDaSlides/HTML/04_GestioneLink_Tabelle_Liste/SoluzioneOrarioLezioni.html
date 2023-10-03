@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tabella Accessibile</title>
+  </head>
+
+  <body>
+    <section>
+      <table border="2">
+        <caption>
+          Orario delle lezioni
+        </caption>
+        <thead>
+          <tr>
+            <th></th>
+            <th id="lun">Lunedì</th>
+            <th id="mar">Martedì</th>
+            <th id="mer">Mercoledì</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th id="9_10">9-10</th>
+            <td rowspan="2" headers="lun 9_10 10_11">Tecnologie Web</td>
+            <td headers="mar 9_10">Analisi</td>
+            <td rowspan="2" headers="mer 9_10 10_11">Sistemi Multimediali</td>
+          </tr>
+          <tr>
+            <th id="10_11">10-11</th>
+            <td rowspan="2" headers="mar 10_11 11_12 ">Sistemi Multimediali</td>
+          </tr>
+          <tr>
+            <th id="11_12">11-12</th>
+            <td headers="lun 11_12">Algebra</td>
+            <td headers="mer 11_12">Fisica</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
