@@ -1,0 +1,72 @@
+<!-- Scrivere il codice HTML5 accessibile e
+semanticamente corretto per realizzare una form
+che invia con metodo GET i seguenti dati:
+– Gruppo di campi di anagrafica: Nome, cognome, email del
+referente del gruppo
+– Gruppo di campi per la scelta del tipo di elaborato, con cui
+si specificano: il tipo di elaborato, a scelta alternativa tra
+semplice, medio, complesso; il numero di membri del
+gruppo, con quantità tra 1 e 4 -->
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Primo Esercizio</title>
+  </head>
+  <body>
+    <form action="script.php" method="GET">
+      <fieldset>
+        <!-- Primo Fieldset -->
+        <legend>Anagrafica</legend>
+        <label>
+          Nome:
+          <input
+            type="text"
+            name="nome"
+            autocomplete="on"
+            placeholder="nome"
+            required
+          />
+        </label>
+        <label>
+          Cognome:
+          <input
+            type="text"
+            name="cognome"
+            autocomplete="on"
+            placeholder="cognome"
+            required
+          />
+        </label>
+        <label>
+          Email reference:
+          <input
+            type="email"
+            name="email"
+            autocomplete="on"
+            placeholder="email"
+            required
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <!-- Secondo Fieldset -->
+        <legend>Tipo elaborato</legend>
+        <label>
+          Tipo Elaborato:
+          <select name="tipoElaborato">
+            <option value="semplice">Semplice</option>
+            <option value="medio">Medio</option>
+            <option value="complesso">Complesso</option>
+          </select>
+        </label>
+        <label>
+          Numero membri:
+          <input type="number" name="nrMembri" min="1" max="4" required />
+        </label>
+      </fieldset>
+      <input type="submit" value="Invia" />
+    </form>
+  </body>
+</html>
