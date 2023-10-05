@@ -3,37 +3,61 @@
   <head>
     <meta charset="utf-8" />
     <title>Tabella Accessibile</title>
+    <style>
+      table,
+      td,
+      th {
+        border: solid black 1px;
+      }
+    </style>
   </head>
 
   <body>
     <section>
-      <table border="2">
+      <table>
         <caption>
           Orario delle lezioni
         </caption>
         <thead>
           <tr>
             <th></th>
-            <th id="lun">Lunedì</th>
-            <th id="mar">Martedì</th>
-            <th id="mer">Mercoledì</th>
+            <th id="lun" scope="colgroup" colspan="2">Lunedì</th>
+            <th id="mar" scope="colgroup" colspan="2">Martedì</th>
           </tr>
+          <thead>
+            <tr>
+              <th></th>
+              <th id="aula21_1" headers="lun" scope="col">Aula 2.1</th>
+              <th id="aula22_1" headers="lun" scope="col">Laboratorio 2.2</th>
+              <th id="aula21_m" headers="mar" scope="col">Aula 2.1</th>
+              <th id="aula22_m" headers="mar" scope="col">Laboratorio 2.2</th>
+            </tr>
+          </thead>
         </thead>
+
         <tbody>
           <tr>
-            <th id="9_10">9-10</th>
-            <td rowspan="2" headers="lun 9_10 10_11">Tecnologie Web</td>
-            <td headers="mar 9_10">Analisi</td>
-            <td rowspan="2" headers="mer 9_10 10_11">Sistemi Multimediali</td>
+            <th id="9_10" scope="row">9-10</th>
+            <td rowspan="2" headers="lun 9_10 10_11 aula21_1">
+              Sistemi Multimediali
+            </td>
+            <td headers="lun 9_10 lab22_1">Programmazione</td>
+            <td headers="mar 9_10 aula21_m">Analisi</td>
+            <td headers="mar 9_10 10_11_12 lab22_m" rowspan="3">
+              Sistemi Multimediali
+            </td>
           </tr>
           <tr>
-            <th id="10_11">10-11</th>
-            <td rowspan="2" headers="mar 10_11 11_12 ">Sistemi Multimediali</td>
+            <th id="10_11" scope="row">10-11</th>
+            <td rowspan="2" headers="lun 10_11 11_12 lab22_1">
+              Tecnologie Web
+            </td>
+            <td headers="mar 10_11 aula21_m">Programmazione</td>
           </tr>
           <tr>
-            <th id="11_12">11-12</th>
-            <td headers="lun 11_12">Algebra</td>
-            <td headers="mer 11_12">Fisica</td>
+            <th id="11_12" scope="row">11-12</th>
+            <td headers="lun 11_12 aula21_1">Algebra</td>
+            <td headers="mar 11_12 aula21_m">Fisica</td>
           </tr>
         </tbody>
       </table>
