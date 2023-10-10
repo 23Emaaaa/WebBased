@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contatti</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contatti</h1>
+    </header>
+    <form action="actionPage.php" method="POST">
+        <fieldset>
+            <legend>Informazioni Anagrafiche</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" autocomplete="given-name" required>
+            <br>
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" autocomplete="family-name" required>
+            <br>
+            <label for="codiceFiscale">Codice Fiscale:</label>
+            <input type="text" id="codiceFiscale" name="codiceFiscale" required>
+            <br>
+            <label for="dataNascita">Data di nascita:</label>
+            <input type="date" id="dataNascita" name="dataNascita" required>
+            <br>
+            <label for="luogoNascita">Luogo di Nascita:</label>
+            <input type="text" id="luogoNascita" name="luogoNascita" required>
+            <br>
+            <label for="indirizzo">Indirizzo:</label>
+            <input type="text" id="indirizzo" name="indirizzo" autocomplete="address-line1" required>
+        </fieldset>
+        <fieldset>
+            <legend>Preferenze</legend>
+            <label>Assicurazione:</label><br>
+            <input type="radio" id="primoLivello" name="assicurazione" value="Primo Livello" required>
+            <label for="primoLivello">Primo Livello</label><br>
+            <input type="radio" id="secondoLivello" name="assicurazione" value="Secondo Livello" required>
+            <label for="secondoLivello">Secondo Livello</label><br>
+            <input type="radio" id="terzoLivello" name="assicurazione" value="Terzo Livello" required>
+            <label for="terzoLivello">Terzo Livello</label><br>
+            <label for="mezzoPreferito">Mezzo Preferito:</label><br>
+            <select id="mezzoPreferito" name="mezzoPreferito" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Automobile">Automobile</option>
+                <option value="Moto">Moto</option>
+                <option value="Bicicletta">Bicicletta</option>
+                <option value="Monopattino">Monopattino</option>
+            </select><br>
+
+            <label for="automunito">Automunito:</label>
+            <input type="checkbox" id="automunito" name="automunito" value="automunito">
+            <br>
+            <label for="descrizione">Descrizione:</label><br>
+            <textarea id="descrizione" name="descrizione" rows="5" cols="50" required></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancella</button>
+    </form>
+</body>
+
+</html>
