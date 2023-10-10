@@ -1,0 +1,95 @@
+<!-- 
+    Scrivere il codice HTML5 valido, ben formato, accessibile (WCAG 2.0, livello A) e semanticamente corretto 
+    per realizzare un documento che contenga una intestazione di primo livello “Contatti” e un form diviso in due parti:
+    La prima parte, dal titolo “Informazioni Anagrafiche”, deve consentire i seguenti input:
+    Nome, Cognome, Codice Fiscale, Data di nascita, Luogo di Nascita, Indirizzo.
+    La seconda parte, dal titolo “Preferenze”, deve consentire i seguenti input:
+    Assicurazione, a scelta (radio) tra Primo Livello, Secondo Livello e Terzo Livello.
+    Mezzo Preferito (select) a scelta tra Automobile, Moto, Bicicletta e Monopattino.
+    Automunito (checkbox).
+    Descrizione (textarea).
+    Bottoni di Submit e Cancella della form.
+    NB: IL NOME DEL FILE DEVE ESSERE vostraemailunibo.html 
+-->
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Informazioni Anagrafiche</title>
+</head>
+
+<body>
+    <header>
+        <h1>Contatti</h1>
+    </header>
+    <form action="actionPage.php" method="GET">
+        <fieldset>
+            <!-- Primo Fieldset -->
+            <legend>Informazioni Anagrafiche</legend>
+            <label>
+                Nome:
+                <input type="text" autocomplete="on" placeholder="nome" required />
+            </label>
+            <br />
+            <label>
+                Cognome:
+                <input type="text" autocomplete="on" placeholder="cognome" required />
+            </label>
+            <br />
+            <label>
+                Codice Fiscale:
+                <input type="text" autocomplete="on" placeholder="cf" required />
+            </label>
+            <br />
+            <label>
+                Data di nascita:
+                <input type="date" required />
+            </label>
+            <br />
+            <label>
+                Luogo di Nascita:
+                <input type="text" autocomplete="on" placeholder="luogo" required />
+            </label>
+            <br />
+            <label>
+                Indirizzo:
+                <input type="text" autocomplete="on" placeholder="indirizzo" required />
+            </label>
+        </fieldset>
+        <fieldset>
+            <!-- Secondo Fieldset -->
+            <legend>Preferenze</legend>
+            <label> Assicurazione: </label>
+            <input type="radio" name="assicurazione" id="primo-livello" value="primo livello" />
+            <label for="primo-livello">Primo Livello</label>
+            <input type="radio" name="assicurazione" id="secondo-livello" value="secondo livello" />
+            <label for="secondo-livello">Secondo Livello</label>
+            <input type="radio" name="assicurazione" id="terzo-livello" value="terzo livello" />
+            <label for="terzo-livello">Terzo Livello</label>
+            <br />
+            <label for="mezzo"> Mezzo Preferito: </label>
+            <select name="mezzo" id="mezzo">
+                <option value="automobile">Automobile</option>
+                <option value="moto">Moto</option>
+                <option value="bicicletta">Bicicletta</option>
+                <option value="monopattino">Monopattino</option>
+            </select>
+            <br />
+            <label for="automunito"> Automunito: </label>
+            <input type="checkbox" name="automunito" id="automunito" value="automunito" />
+
+            <br />
+            <label for="descrizione">
+                Descrizione:
+                <textarea name="descrizione" id="descrizione" rows="10"
+                    cols="50">Inserisci qui la tua descrizione</textarea>
+            </label>
+        </fieldset>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Cancella</button>
+    </form>
+</body>
+
+</html>
