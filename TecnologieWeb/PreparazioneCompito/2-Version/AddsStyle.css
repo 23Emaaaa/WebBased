@@ -2,29 +2,41 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-header {
-    background-color: #00cdd4; /* the color applied to the background of the header */
-    color: white; /* the color of the text in the header */
-    text-align: center; /* align the text to center of the header */
-    padding: 10px; /* add some padding inside the header (now is 10 px) */
-    border-radius: 5px; /* add a rounded corner to the header */
-}
 
+header {
+    background-color: #00cdd4;
+    /* the color applied to the background of the header */
+    color: white;
+    /* the color of the text in the header */
+    text-align: center;
+    /* align the text to center of the header */
+    padding: 10px;
+    /* add some padding inside the header (now is 10 px) */
+    border-radius: 5px;
+    /* add a rounded corner to the header */
+}
 
 /* Style the entire form */
 .contact-form {
-    margin: 20px auto; /* The distance that separates the "form" form the left margin - used "auto" allows to resize it based on the windows size */
-    padding: 20px auto; /* Add some padding inside the form */
-    border: 2px solid #ddd; /* Add a grey (similar color) border around the form */
-    background-color: whitesmoke; /* Add a color to the form background */
-    max-width: 600px; /* Set a maximum width for the form */
+    margin: 20px auto;
+    /* The distance that separates the "form" form the left margin - used "auto" allows to resize it based on the windows size */
+    padding: 20px auto;
+    /* Add some padding inside the form */
+    border: 2px solid #ddd;
+    /* Add a grey (similar color) border around the form */
+    background-color: whitesmoke;
+    /* Add a color to the form background */
+    max-width: 600px;
+    /* Set a maximum width for the form */
     border-radius: 10px;
 }
 
 /* Style the form fields labels */
 label {
-    display: block; /* Display the label as a block element then you have to scroll trough the site so see it completely */
-    margin-top: 5px; /* Add some space between the label and the input */
+    display: block;
+    /* Display the label as a block element then you have to scroll trough the site so see it completely */
+    margin-top: 5px;
+    /* Add some space between the label and the input */
     /* font-weight: bold; /* Add a bold font weight to the label */
 }
 
@@ -35,28 +47,41 @@ input[type="radio"],
 input[type="checkbox"],
 select,
 textarea {
-    width: 90%; /* Set the width of the input to 100% of the container */
-    padding: 10px; /* Add some padding inside each input */
-    margin: 10px 0 10px 0; /* Add some space around the input */
-    border: 1px solid rgb(0, 217, 255); /* Add a grey border around the input */
-    border-radius: 10px; /* Add a rounded corner to the input */
+    width: 90%;
+    /* Set the width of the input to 100% of the container */
+    padding: 10px;
+    /* Add some padding inside each input */
+    margin: 10px 0 10px 0;
+    /* Add some space around the input */
+    border: 1px solid rgb(0, 217, 255);
+    /* Add a grey border around the input */
+    border-radius: 10px;
+    /* Add a rounded corner to the input */
 }
 
 /* Style the Submit and Reset the buttons */
 button[type="submit"],
 button[type="reset"] {
-    margin: 5px 5px; /* Add some space around the buttons */
-    background-color: #00cdd4; /* Add a background color to the button */
-    color: whitesmoke; /* Add a text color to the button */
-    padding: 5px; /* Add some padding to the button */
-    border: none; /* Remove the default border around the button */
-    cursor: pointer; /* Add a pointer cursor on mouse-over */
+    margin: 5px 5px;
+    /* Add some space around the buttons */
+    background-color: #00cdd4;
+    /* Add a background color to the button */
+    color: whitesmoke;
+    /* Add a text color to the button */
+    padding: 5px;
+    /* Add some padding to the button */
+    border: none;
+    /* Remove the default border around the button */
+    cursor: pointer;
+    /* Add a pointer cursor on mouse-over */
 }
 
 /* Style the form legend (fieldset title) */
 legend {
-    margin-top: 10px; /* Add some space between the legend and the rest of the form */
-    font-weight: bold; /* Add a bold font weight to the legend */
-    font-size: 1.2em; /* Add a font size to the legend */
-    
+    margin-top: 10px;
+    /* Add some space between the legend and the rest of the form */
+    font-weight: bold;
+    /* Add a bold font weight to the legend */
+    font-size: 1.2em;
+    /* Add a font size to the legend */
 }
