@@ -1,12 +1,3 @@
-/* Reset dei margini e dei padding */
-body,
-h1,
-p,
-ul,
-li {
-    max-width: 100%;
-}
-
 /* 
     Tutti i font devono avere la stessa font-family, che deve essere monospace. 
     La dimensione deve essere del 100%.
@@ -16,7 +7,7 @@ body {
     font-family: monospace;
     font-size: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: visible;
 }
 
 /* 
@@ -122,11 +113,11 @@ aside>p {
     Margin e padding devono essere simili a quelli riportati nello screenshot. 
 */
 footer {
+    clear: both;
     background: linear-gradient(to top left, pink, yellow, pink, purple);
     width: 100%;
     border-top: 3px solid purple;
-    margin: 10px 10px 20px 10px;
-    padding: 10px 10px;
+    padding: 10px;
     text-align: center;
 }
 
