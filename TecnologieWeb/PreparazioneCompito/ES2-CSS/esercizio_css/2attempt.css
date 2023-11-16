@@ -21,8 +21,8 @@ body {
 header {
     background: linear-gradient(to bottom right, pink, yellow, pink, purple);
     width: 100%;
-    margin-top: 10px;
-    padding: 20px 0px;
+    margin-top: 1%;
+    padding: 20px 0;
     border-bottom: 3px solid purple;
     text-align: right;
     color: purple;
@@ -33,7 +33,6 @@ nav,
 section,
 aside {
     display: inline-block;
-    vertical-align: top;
 }
 
 /* 
@@ -44,8 +43,8 @@ nav {
     /* per farlo affiancare a section e aside */
     float: left;
     width: 15%;
-    margin: 10px 50px 0 5px;
-    padding: 15px 10px;
+    margin: 1% 5% 0 1%;
+    padding: 15px 0px;
     background: linear-gradient(to bottom right, pink, yellow, pink, purple);
     border-top: 3px solid purple;
     border-bottom: 3px solid purple;
@@ -62,12 +61,23 @@ nav>ul>li {
     line-height: 2;
 }
 
+/* 
+    |Non richiesto ma fatto per test:|
+    Transition aggiunge un effetto di transizione alle proprietà
+     di sfondo, colore, peso del carattere e padding dell'elemento 
+     di ancoraggio. 
+     L'effetto di transizione dura 0.3 secondi.
+*/
 nav a {
     color: blue;
     text-decoration: underline;
     transition: background 0.3s, color 0.3s, font-weight 0.3s, padding 0.3s;
 }
 
+/* 
+    Sta stilizzando gli elementi di ancoraggio <a> all'interno di un elemento di navigazione <nav> 
+    quando vengono sovraimpressi dal cursore dell'utente.
+*/
 nav a:hover {
     background: purple;
     color: white;
@@ -86,7 +96,7 @@ nav:hover {
 */
 section {
     width: 50%;
-    margin: 20px 10px 10px 10px;
+    margin: 2%;
 }
 
 /* I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero. */
@@ -99,7 +109,7 @@ section>p {
 aside {
     float: left;
     width: 20%;
-    margin: 20px 35px 0 0;
+    margin: 2% 4% 0 0;
 }
 
 aside>p {
@@ -113,6 +123,7 @@ aside>p {
     Margin e padding devono essere simili a quelli riportati nello screenshot. 
 */
 footer {
+    /* impedisce ai float di influenzare l'elemento <footer>. */
     clear: both;
     background: linear-gradient(to top left, pink, yellow, pink, purple);
     width: 100%;
