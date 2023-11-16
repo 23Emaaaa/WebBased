@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Toggle Switch</title>
+    <style>
+        input[type="checkbox"] {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        input[type="checkbox"]+label {
+            display: inline-block;
+            position: relative;
+            width: 60px;
+            height: 34px;
+        }
+
+        input[type="checkbox"]+label .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: background-color 0.4s;
+        }
+
+        input[type="checkbox"]+label .slider:before {
+            content: "";
+            position: absolute;
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: transform 0.4s, background-color 0.4s;
+        }
+
+        input[type="checkbox"]:checked+label .slider {
+            background-color: #2196F3;
+        }
+
+        input[type="checkbox"]:focus+label .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input[type="checkbox"]:checked+label .slider:before {
+            transform: translateX(26px);
+        }
+
+        input[type="checkbox"]+label .slider.round {
+            border-radius: 34px;
+        }
+
+        input[type="checkbox"]+label .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Toggle Switch</h2>
+
+    <input type="checkbox" id="toggle1">
+    <label for="toggle1">
+        <span class="slider"></span>
+    </label>
+
+    <input type="checkbox" id="toggle2" checked>
+    <label for="toggle2">
+        <span class="slider"></span>
+    </label><br><br>
+
+    <input type="checkbox" id="toggle3">
+    <label for="toggle3">
+        <span class="slider round"></span>
+    </label>
+
+    <input type="checkbox" id="toggle4" checked>
+    <label for="toggle4">
+        <span class="slider round"></span>
+    </label>
+
+</body>
+
+</html>
