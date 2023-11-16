@@ -1,3 +1,12 @@
+/* Reset dei margini e dei padding */
+body,
+h1,
+p,
+ul,
+li {
+    max-width: 100%;
+}
+
 /* 
     Tutti i font devono avere la stessa font-family, che deve essere monospace. 
     La dimensione deve essere del 100%.
