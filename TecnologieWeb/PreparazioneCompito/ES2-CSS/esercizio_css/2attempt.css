@@ -52,8 +52,8 @@ nav {
     margin: 5px 20px 0 5px;
     padding: 1px;
     background: linear-gradient(to bottom right, pink, yellow, pink, purple);
-    margin-top: 3px solid purple;
-    margin-bottom: 3px solid purple;
+    border-top: 3px solid purple;
+    border-bottom: 3px solid purple;
 }
 
 /* 
