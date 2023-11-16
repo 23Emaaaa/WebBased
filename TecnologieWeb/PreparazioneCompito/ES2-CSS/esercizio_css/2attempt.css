@@ -65,7 +65,7 @@ nav {
     sono allineati a sinistra ed hanno interlinea pari a 2 volte il valore di default. 
     Lo sfondo di <nav> consiste in un gradiente uguale a quello di <header> 
 */
-nav ul li {
+nav>ul>li {
     list-style: square;
     text-align: left;
     line-height: 2;
