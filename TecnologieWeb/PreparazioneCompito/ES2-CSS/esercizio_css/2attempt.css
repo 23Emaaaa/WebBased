@@ -99,7 +99,7 @@ section {
 }
 
 /* I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero. */
-section p {
+section>p {
     text-align: left;
     color: black;
 }
@@ -111,7 +111,7 @@ aside {
     margin: 20px 35px 0 0;
 }
 
-aside p {
+aside>p {
     color: purple;
 }
 
@@ -130,7 +130,7 @@ footer {
     text-align: center;
 }
 
-footer p {
+footer>p {
     color: purple;
     font-size: 80%;
 }
