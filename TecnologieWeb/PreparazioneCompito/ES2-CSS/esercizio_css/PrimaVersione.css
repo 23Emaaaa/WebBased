@@ -1,0 +1,56 @@
+body,
+header {
+    margin: 0;
+    padding: 25px;
+    text-align: right;
+}
+
+body,
+footer {
+    text-align: center;
+    padding: 13px;
+}
+
+body>header>h1,
+body>footer {
+    font-family: monospace;
+    width: 100%;
+}
+
+aside {
+    width: 20%;
+    text-align: left;
+    padding: 0 50px;
+    color: purple;
+}
+
+nav,
+aside,
+body>section {
+    display: inline-block;
+    vertical-align: top;
+    font-family: monospace;
+}
+
+nav ul {
+    list-style: square;
+    background-image: linear-gradient(to bottom right, pink, yellow, pink, purple);
+}
+
+body>footer>p {
+    width: 80%;
+}
+
+body>header {
+    width: 100%;
+    border-bottom: 3.5px solid purple;
+    background-image: linear-gradient(to bottom right, pink, yellow, pink, rgb(172, 0, 172));
+    color: rgb(143, 0, 143);
+}
+
+body>footer {
+    width: 100%;
+    border-top: 3.5px solid purple;
+    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
+    color: rgb(143, 0, 143);
+}
