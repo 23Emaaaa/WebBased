@@ -57,7 +57,7 @@ nav {
     sono allineati a sinistra ed hanno interlinea pari a 2 volte il valore di default. 
     Lo sfondo di <nav> consiste in un gradiente uguale a quello di <header> 
 */
-nav>ul>li {
+nav ul li {
     list-style: square;
     text-align: left;
     line-height: 2;
@@ -102,7 +102,7 @@ section {
 }
 
 /* I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero. */
-section>p {
+section p {
     text-align: left;
     color: black;
 }
@@ -114,7 +114,7 @@ aside {
     margin: 2% 4% 0 0;
 }
 
-aside>p {
+aside p {
     color: purple;
 }
 
@@ -131,10 +131,10 @@ footer {
     width: 100%;
     border-top: 3px solid purple;
     padding: 10px;
-    text-align: center;
 }
 
-footer>p {
+footer p {
     color: purple;
+    text-align: center;
     font-size: 80%;
 }
