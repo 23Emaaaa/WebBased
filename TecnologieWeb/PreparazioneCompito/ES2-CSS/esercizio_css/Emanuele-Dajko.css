@@ -26,8 +26,11 @@ header {
     margin-top: 1%;
     padding: 20px 0;
     border-bottom: 3px solid purple;
-    text-align: right;
+}
+
+header h1 {
     color: purple;
+    text-align: right;
 }
 
 /* L’elemento <nav>, l’elemento <aside> e l’elemento <section> sono affiancati, uno accanto all’altro. */
