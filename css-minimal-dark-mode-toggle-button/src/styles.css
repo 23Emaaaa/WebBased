@@ -15,7 +15,7 @@ label {
 	display: block;
 	background: #ebebeb;
 	border-radius: 200px;
-	box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+	box-shadow: inset 0px 5px 15px aquamarine, inset 0px -5px 15px greenyellow;
 	cursor: pointer;
 	transition: 0.3s;
 }
@@ -29,7 +29,7 @@ label:after {
 	left: 10px;
 	background: linear-gradient(180deg, #ffcc89, #d8860b);
 	border-radius: 180px;
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 10px peru;
 	transition: 0.3s;
 }
 
@@ -41,12 +41,14 @@ input {
 
 input:checked+label {
 	background: #242424;
+	box-shadow: inset 0px 5px 15px blue, inset 0px -5px 15px red;
 }
 
 input:checked+label:after {
 	left: 490px;
 	transform: translateX(-100%);
 	background: linear-gradient(180deg, #777, #3a3a3a);
+	box-shadow: 0px 5px 10px purple;
 }
 
 label:active:after {
@@ -81,12 +83,12 @@ label svg.sun {
 
 label svg.moon {
 	left: 340px;
-	fill: #7e7e7e;
+	fill: black;
 	transition: 0.3s;
 }
 
 input:checked+label svg.sun {
-	fill: #7e7e7e;
+	fill: white;
 }
 
 input:checked+label svg.moon {
