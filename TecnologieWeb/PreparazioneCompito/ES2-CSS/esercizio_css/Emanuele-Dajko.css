@@ -1,56 +1,143 @@
-body,
+/* La mia mail: emanuele.dajko@studio.unibo.it */
+
+/* 
+    Tutti i font devono avere la stessa font-family, che deve essere monospace. 
+    La dimensione deve essere del 100%.
+    Inoltre nascondo le barre di scorrimento orizzontali e verticali.  
+*/
+body {
+    font-family: monospace;
+    font-size: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+/* 
+    L’elemento di intestazione <header> ha come sfondo un gradiente che varia dai seguenti colori
+    (in diagonale, dall’angolo in alto a sinistra all’angolo in basso a destra): rosa, giallo, rosa, viola. 
+    La sua larghezza è pari al 100%. 
+    Margin e padding devono essere simili a quelli riportati nello screenshot. 
+    Il bordo inferiore è di colore viola ed ha uno spessore simile a quello mostrato nello screenshot.
+    Il testo in <header> è di colore viola ed è allineato a destra.
+*/
 header {
-    margin: 0;
-    padding: 25px;
+    background: linear-gradient(to bottom right, pink, yellow, pink, purple);
+    width: 100%;
+    margin-top: 1%;
+    padding: 20px 0;
+    border-bottom: 3px solid purple;
+}
+
+header h1 {
+    color: purple;
     text-align: right;
 }
 
-body,
-footer {
-    text-align: center;
-    padding: 13px;
-}
-
-body>header>h1,
-body>footer {
-    font-family: monospace;
-    width: 100%;
-}
-
+/* L’elemento <nav>, l’elemento <aside> e l’elemento <section> sono affiancati, uno accanto all’altro. */
+nav,
+section,
 aside {
-    width: 20%;
+    display: inline-block;
+}
+
+/* 
+    L’elemento <nav> deve occupare il 15% della larghezza 
+    e deve avere padding e margini simili a quelli mostrati nello screenshot. 
+*/
+nav {
+    /* per farlo affiancare a section e aside */
+    float: left;
+    width: 15%;
+    margin: 1% 5% 0 1%;
+    padding: 15px 0px;
+    background: linear-gradient(to bottom right, pink, yellow, pink, purple);
+    border-top: 3px solid purple;
+    border-bottom: 3px solid purple;
+}
+
+/* 
+    Gli elementi della lista in <nav> mostrano un quadratino come simbolo, 
+    sono allineati a sinistra ed hanno interlinea pari a 2 volte il valore di default. 
+    Lo sfondo di <nav> consiste in un gradiente uguale a quello di <header> 
+*/
+nav ul li {
+    list-style: square;
     text-align: left;
-    padding: 0 50px;
+    line-height: 2;
+}
+
+/* 
+    |Non richiesto ma fatto per test:|
+    Transition aggiunge un effetto di transizione alle proprietà
+     di sfondo, colore, peso del carattere e padding dell'elemento 
+     di ancoraggio. 
+     L'effetto di transizione dura 0.3 secondi.
+*/
+nav a {
+    color: blue;
+    text-decoration: underline;
+    transition: background 0.3s, color 0.3s, font-weight 0.3s, padding 0.3s;
+}
+
+/* 
+    Sta stilizzando gli elementi di ancoraggio <a> all'interno di un elemento di navigazione <nav> 
+    quando vengono sovraimpressi dal cursore dell'utente.
+*/
+nav a:hover {
+    background: purple;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+}
+
+/* In caso di hover sull’elelmento <nav> allora l’ordine dei colori del gradiente viene invertito. */
+nav:hover {
+    background: linear-gradient(to bottom right, purple, pink, yellow, pink);
+}
+
+/* 
+    L’elemento <section> deve occupare il 50% della larghezza 
+    e deve avere padding e margin simili a quelli mostrati nello screenshot. 
+*/
+section {
+    width: 50%;
+    margin: 2%;
+}
+
+/* I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero. */
+section p {
+    text-align: left;
+    color: black;
+}
+
+/* L’elemento <aside> deve occupare il 20% della larghezza e i suoi paragrafi devono avere colore viola. */
+aside {
+    float: left;
+    width: 20%;
+    margin: 2% 4% 0 0;
+}
+
+aside p {
     color: purple;
 }
 
-nav,
-aside,
-body>section {
-    display: inline-block;
-    vertical-align: top;
-    font-family: monospace;
-}
-
-nav ul {
-    list-style: square;
-    background-image: linear-gradient(to bottom right, pink, yellow, pink, purple);
-}
-
-body>footer>p {
-    width: 80%;
-}
-
-body>header {
+/* 
+    L’elemento <footer> ha come sfondo un gradiente che varia dai seguenti colori 
+    (in diagonale, dall’angolo in basso a destra all’angolo in alto a sinistra): rosa, giallo, rosa, viola. 
+    La sua larghezza è pari al 100%. 
+    Margin e padding devono essere simili a quelli riportati nello screenshot. 
+*/
+footer {
+    /* impedisce ai float di influenzare l'elemento <footer>. */
+    clear: both;
+    background: linear-gradient(to top left, pink, yellow, pink, purple);
     width: 100%;
-    border-bottom: 3.5px solid purple;
-    background-image: linear-gradient(to bottom right, pink, yellow, pink, rgb(172, 0, 172));
-    color: rgb(143, 0, 143);
+    border-top: 3px solid purple;
+    padding: 10px;
 }
 
-body>footer {
-    width: 100%;
-    border-top: 3.5px solid purple;
-    background-image: linear-gradient(to top left, pink, yellow, pink, purple);
-    color: rgb(143, 0, 143);
+footer p {
+    color: purple;
+    text-align: center;
+    font-size: 80%;
 }
