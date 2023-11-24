@@ -101,4 +101,29 @@ class DatabaseHelper
         // Fetch all rows from the result as an associative array and return it
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+
+    /**
+     * Get authors from the database along with their associated categories
+     * @return array - Returns an associative array of the fetched rows. Each row contains the username, name, and a comma-separated list of categories associated with the author.
+     */
+    public function getAuthors()
+    {
+        // Prepare the SQL query
+        $query = "SELECT username, nome, GROUP_CONCAT(DISTINCT nomecategoria) as argomenti 
+                  FROM categoria, articolo, autore, articolo_ha_categoria 
+                  WHERE idarticolo=articolo AND categoria=idcategoria AND autore=idautore AND attivo=1 
+                  GROUP BY username, nome";
+
+        // Prepare the statement
+        $stmt = $this->db->prepare($query);
+
+        // Execute the statement
+        $stmt->execute();
+
+        // Get the result of the query
+        $result = $stmt->get_result();
+
+        // Fetch all rows from the result as an associative array and return it
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
