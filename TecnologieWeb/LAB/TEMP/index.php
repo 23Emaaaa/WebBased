@@ -1,4 +1,5 @@
 <?php
+
 // Include the bootstrap file
 require_once("bootstrap.php");
 
